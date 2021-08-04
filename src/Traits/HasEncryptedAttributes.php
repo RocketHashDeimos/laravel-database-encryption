@@ -292,13 +292,13 @@ trait HasEncryptedAttributes
      * @param string $key
      * @param mixed  $value
      *
-     * @return void
+     * @return self
      */
     public function setAttribute($key, $value)
     {
         parent::setAttribute($key, $value);
 
-        $this->doEncryptAttribute($key);
+        return $this->doEncryptAttribute($key);
     }
 
     /**
